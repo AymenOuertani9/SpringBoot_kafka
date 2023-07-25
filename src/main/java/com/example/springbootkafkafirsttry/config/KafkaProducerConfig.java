@@ -29,8 +29,8 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public ProducerFactory<String, String> producerFactory(Map<String, Object> producerConfig) {
-        return new DefaultKafkaProducerFactory<>(producerConfig);
+    public ProducerFactory<String, String> producerFactory() {
+        return new DefaultKafkaProducerFactory<>(producerConfig());
     }
 
     @Bean
